@@ -189,7 +189,7 @@ Dependencies
 
 Not a dependency per-se, but used alongside Finial, can subscribe RHEL systems to the Red Hat Network.
 
-For AWS deployments the aws_cli is required. Role for this can be found at https://github.com/kenhitchcock/ansible-role-awscli
+For AWS deployments the aws_cli is required, please configure the cli with the access key and secret access key creds.The role for this can be found at https://github.com/kenhitchcock/ansible-role-awscli. SSH .pem key needs to be pre-createddownl, oaded via the aws console and chmodded 400
 
 Example Playbook
 ----------------
@@ -377,7 +377,7 @@ guests:
       cornerstone_vm_data_disk: false
       cornerstone_vm_data_disk_device_name: "/dev/xvdb"
       cornerstone_aws_vm_data_disk_managed: "gp2"
-      cornerstone_vm_data_disk_size: "50" 
+      cornerstone_neighbourhoodvm_data_disk_size: "50" 
 
 
 ```
@@ -385,7 +385,6 @@ guests:
 
 # For Azure you cannot use the guest layout yet. The task will only create one instance at a time.
 
-# For aws please configure the aws cli with the access key and secret access key creds
 
 
 ## Libvrt vars file example 
